@@ -26,6 +26,9 @@ button {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 100%;
 }
 
 *,
@@ -67,9 +70,6 @@ body {
     background-image: url(./../images/bg-image.png);
     background-color: #a85368;
     color: #ffffff;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 100%;
 }
 
 .intro__title {
@@ -90,6 +90,11 @@ body {
 }
 
 /* REGISTRATION */
+.registration__calendar-img {
+    display: block;
+    margin: 0 auto;
+}
+
 .registration {
     display: flex;
     justify-content: flex-start;
@@ -97,63 +102,29 @@ body {
     width: 50%;
 }
 
-.registration-form_default-field {
+.registration-form__item > input,
+.date-fieldset__item > select,
+.date-fieldset__item > input {
     padding: 12px 13px 11px 13px;
     border: 1px solid #c6c6c6;
     border-radius: 5px;
     width: 100%;
 }
 
+.registration-form__item > label,
+.registration-form__item > legend {
+    padding: 15px 0 10px 0;
+    display: block;
+}
+
 .registration-form label,
 .registration-form legend {
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 17px;
     color: #333333;
 }
 
-.registration-form__item-title {
-    padding: 15px 0 10px 0;
-    display: block;
-}
-.calendar-img {
-    display: block;
-    margin: 0 auto;
-}
-
-.gender-fieldset {
-    margin-bottom: 35px;
-}
-
-.gender-fieldset__title {
-    padding: 14px 0 15px 0;
-}
-
-.gender-fieldset__item {
-    display: inline-flex;
-    align-items: center;
-}
-
-.gender-fieldset__item:last-child {
-    margin-left: 24px;
-}
-
-.gender-fieldset__item-title {
-    padding-left: 14px;
-}
-
-.submit-btn {
-    width: 100%;
-    margin-top: 17px;
-    padding: 11px 0;
-    border-radius: 5px;
-    background: #8889b9;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-/*DATE*/
+/* DATE */
 .date-fieldset > p {
     display: flex;
     justify-content: space-between;
@@ -171,11 +142,51 @@ body {
     max-width: 99px;
 }
 
-.registration-form__agree {
-    display: flex;
+/* GENDER */
+.gender-fieldset > legend {
+    padding: 14px 0 15px 0;
+}
+
+.gender-fieldset__item {
+    display: inline-flex;
     align-items: center;
 }
 
-.registration-form__agree-title {
+.gender-fieldset__item:last-child {
+    margin-left: 24px;
+}
+
+.gender-fieldset__item > label {
     padding-left: 14px;
+}
+
+.gender-fieldset__item > input {
+    width: 18px;
+    height: 18px;
+}
+
+/* AGREE */
+.registration-form__agree {
+    display: flex;
+    align-items: center;
+    margin: 34px 0 26px 0;
+}
+
+.registration-form__agree > label {
+    padding: 0 0 0 14px;
+}
+
+.registration-form__agree > input {
+    width: 18px;
+    height: 18px;
+}
+
+/* SUBMIT BTN*/
+.submit-btn {
+    width: 100%;
+    padding: 11px 0;
+    border-radius: 5px;
+    background: #8889b9;
+    color: #ffffff;
+    cursor: pointer;
 }
