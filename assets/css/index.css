@@ -6,9 +6,22 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+fieldset,
+input,
+legend,
+select {
     margin: 0;
     padding: 0;
+}
+
+fieldset {
+    border: none;
+}
+
+button {
+    border: none;
+    background: #ffffff;
 }
 
 body {
@@ -24,7 +37,7 @@ body {
 /* CONTAINERS */
 .container {
     width: 100%;
-    max-width: 386px;
+    max-width: 400px;
 }
 
 .container_intro {
@@ -36,6 +49,7 @@ body {
     margin-right: 0;
     margin-left: 59px;
     text-align: left;
+    max-width: 386px;
 }
 
 /* MAIN */
@@ -76,13 +90,92 @@ body {
 }
 
 /* REGISTRATION */
-
 .registration {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 50%;
 }
 
-.registration-form > label {
+.registration-form_default-field {
+    padding: 12px 13px 11px 13px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.registration-form label,
+.registration-form legend {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333333;
+}
+
+.registration-form__item-title {
+    padding: 15px 0 10px 0;
     display: block;
+}
+.calendar-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.gender-fieldset {
+    margin-bottom: 35px;
+}
+
+.gender-fieldset__title {
+    padding: 14px 0 15px 0;
+}
+
+.gender-fieldset__item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.gender-fieldset__item:last-child {
+    margin-left: 24px;
+}
+
+.gender-fieldset__item-title {
+    padding-left: 14px;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 17px;
+    padding: 11px 0;
+    border-radius: 5px;
+    background: #8889b9;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/*DATE*/
+.date-fieldset > p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-fieldset__months {
+    max-width: 184px;
+}
+
+.date-fieldset__day {
+    max-width: 69px;
+}
+
+.date-fieldset__year {
+    max-width: 99px;
+}
+
+.registration-form__agree {
+    display: flex;
+    align-items: center;
+}
+
+.registration-form__agree-title {
+    padding-left: 14px;
 }

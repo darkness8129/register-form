@@ -19,49 +19,59 @@
         </article>
         <article class="registration">
             <div class="container container_registration">
-                <img src="./assets/images/calendar-img.png" alt="">
+                <img src="./assets/images/calendar-img.png" alt="Calendar" class="calendar-img">
                 <form class="registration-form">
-                    <label for="email">Email address
-                        <input type="email" id='email'>
-                    </label>  
-                    <label for="password">Password
-                        <input type="password" id='password'>
-                    </label>
-                    <label for="fullname">Full name
-                        <input type="text" id = 'fullname'>
-                    </label>
-                    <label for="months">Date of birth
-                        <select id='months'">
-                            <option value='0'>January</option>
-                            <option value='1'>February</option>
-                            <option value='2'>March</option>
-                            <option value='3'>April</option>
-                            <option value='4'>May</option>
-                            <option value='5'>June</option>
-                            <option value='6'>July</option>
-                            <option value='7'>August</option>
-                            <option value='8'>September</option>
-                            <option value='9'>October</option>
-                            <option value='10'>November</option>
-                            <option value='11'>December</option>
-                        </select>
-                        <input type="text" style= 'width: 20px;'>
-                        <input type="text" style= 'width: 20px;' > 
-                    </label>
-                    <label for="gender">Gender
-                        <label for="male">
+                    <p>
+                        <label for="email" class="registration-form__item-title">Email address</label>
+                        <input type="email" id='email' class="registration-form_default-field">
+                    </p>
+                    <p>
+                        <label for="password" class="registration-form__item-title">Password</label>
+                        <input type="password" id='password' class="registration-form_default-field">
+                    </p>
+                    <p>
+                        <label for="fullname" class="registration-form__item-title">Full name</label>
+                        <input type="text" id = 'fullname' class="registration-form_default-field">
+                    </p>
+                    <fieldset class="date-fieldset">
+                        <legend class="registration-form__item-title">Date of birth</legend>
+                        <p>
+                            <select id='months' placeholder="Month" class="registration-form_default-field date-fieldset__months">
+                                <option value='0'>January</option>
+                                <option value='1'>February</option>
+                                <option value='2'>March</option>
+                                <option value='3'>April</option>
+                                <option value='4'>May</option>
+                                <option value='5'>June</option>
+                                <option value='6'>July</option>
+                                <option value='7'>August</option>
+                                <option value='8'>September</option>
+                                <option value='9'>October</option>
+                                <option value='10'>November</option>
+                                <option value='11'>December</option>
+                            </select>
+                            <input type="text" placeholder="Day" class="registration-form_default-field date-fieldset__day">
+                            <input type="text" placeholder="Year" class="registration-form_default-field date-fieldset__year"> 
+                        </p>
+                    </fieldset>
+                    <fieldset class="gender-fieldset">
+                        <legend class="gender-fieldset__title">Gender</legend>
+                        <p class="gender-fieldset__item">
                             <input type="radio" value='male' name="gender" id="male">
-                            Male
-                        </label>
-                        <label for="female">
-                            <input type="radio" value='female' id='female'>
-                            Female
-                        </label>
-                    </label>
-                    <label for="agree">
-                        <input type="checkbox" id='agree' > I agree with Terms and Conditions
-                    </label>
-                    <button type='submit'>Create my account</button>
+                            <label for="male" class="gender-fieldset__item-title">Male</label>
+                        </p>
+                        <p class="gender-fieldset__item">
+                            <input type="radio" value='female' id='female' name="gender">
+                            <label for="female" class="gender-fieldset__item-title">Female</label>
+                        </p>   
+                    </fieldset>
+                    <p class="registration-form__agree">
+                        <input type="checkbox" id='agree' >
+                        <label for="agree" class="registration-form__agree-title">I agree with Terms and Conditions</label>
+                    </p>
+                    <p>
+                        <button type='submit' class="submit-btn">Create my account</button>
+                    </p>     
                 </form>
             </div>
         </article>
