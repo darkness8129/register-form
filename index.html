@@ -3,9 +3,68 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Registration Page</title>
+    <title>Registration Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-	
+	<main class="main">
+        <article class="intro">
+            <div class="container container_intro">
+                <h1 class="intro__title">Join the community!</h1>
+                <p class="intro__main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, ducimus? Harum eaque adipisci at officiis animi aperiam quos. Quidem dolore temporibus delectus alias quod magnam quasi, officia ipsam reprehenderit modi deserunt laudantium harum ducimus nihil facilis assumenda voluptatum itaque velit culpa voluptate accusamus? Necessitatibus animi similique enim suscipit ullam. In!</p>
+                <p class="intro__bottom-text">At the end of the trial you manually choose whether to subscribe.You will not be charged automatically.</p>
+                    
+            </div>
+        </article>
+        <article class="registration">
+            <div class="container container_registration">
+                <img src="./assets/images/calendar-img.png" alt="">
+                <form class="registration-form">
+                    <label for="email">Email address
+                        <input type="email" id='email'>
+                    </label>  
+                    <label for="password">Password
+                        <input type="password" id='password'>
+                    </label>
+                    <label for="fullname">Full name
+                        <input type="text" id = 'fullname'>
+                    </label>
+                    <label for="months">Date of birth
+                        <select id='months'">
+                            <option value='0'>January</option>
+                            <option value='1'>February</option>
+                            <option value='2'>March</option>
+                            <option value='3'>April</option>
+                            <option value='4'>May</option>
+                            <option value='5'>June</option>
+                            <option value='6'>July</option>
+                            <option value='7'>August</option>
+                            <option value='8'>September</option>
+                            <option value='9'>October</option>
+                            <option value='10'>November</option>
+                            <option value='11'>December</option>
+                        </select>
+                        <input type="text" style= 'width: 20px;'>
+                        <input type="text" style= 'width: 20px;' > 
+                    </label>
+                    <label for="gender">Gender
+                        <label for="male">
+                            <input type="radio" value='male' name="gender" id="male">
+                            Male
+                        </label>
+                        <label for="female">
+                            <input type="radio" value='female' id='female'>
+                            Female
+                        </label>
+                    </label>
+                    <label for="agree">
+                        <input type="checkbox" id='agree' > I agree with Terms and Conditions
+                    </label>
+                    <button type='submit'>Create my account</button>
+                </form>
+            </div>
+        </article>
+    </main>
 </body>
 </html>

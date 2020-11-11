@@ -1,0 +1,88 @@
+/* RESET */
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* CONTAINERS */
+.container {
+    width: 100%;
+    max-width: 386px;
+}
+
+.container_intro {
+    margin-right: 64px;
+    text-align: right;
+}
+
+.container_registration {
+    margin-right: 0;
+    margin-left: 59px;
+    text-align: left;
+}
+
+/* MAIN */
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+/* INTRO */
+.intro {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    background-image: url(./../images/bg-image.png);
+    background-color: #a85368;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 100%;
+}
+
+.intro__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.intro__main-text {
+    margin: 86px 0 100px 0;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.intro__bottom-text {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+/* REGISTRATION */
+
+.registration {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.registration-form > label {
+    display: block;
+}
