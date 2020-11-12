@@ -6,6 +6,8 @@
     <title>Registration Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/validation.js" defer></script>
 </head>
 <body>
 	<main class="main">
@@ -20,23 +22,30 @@
         <article class="registration">
             <div class="container container_registration">
                 <img src="./assets/images/calendar-img.png" alt="Calendar" class="registration__calendar-img">
-                <form class="registration-form">
+                <form class="registration-form" id='registration-form'>
                     <p class="registration-form__item">
                         <label for="email">Email address</label>
-                        <input type="email" id='email' required>
+                        <input type="email" id='email' name = 'email' class="border_grey" required >
                     </p>
-                    <p class="registration-form__item">
+                    <div class="registration-form__item registration-form__password">
                         <label for="password">Password</label>
-                        <input type="password" id='password' required>
-                    </p>
-                    <p class="registration-form__item">
-                        <label for="fullname">Full name</label>
-                        <input type="text" id = 'fullname' required>
-                    </p>
+                        <div class="input-password-wrapper">
+                            <input type="password" id='password' name ='password'class="border_grey" required minlength="8" maxlength="12">
+                            <button class="toggle-password-btn" id = 'toggle-password-btn' type="button">show</button>
+                        </div>
+                    </div>
+                    <div class="registration-form__item registration-form__fullname">
+                        <div class="label-fullname-wrapper">
+                            <label for="fullname">Full name</label>
+                            <span class="fullname-error" id='fullname-error'></span>
+                        </div>
+                        <input type="text" id = 'fullname' class="border_grey" name="fullname" require>
+                    </div>
                     <fieldset class="registration-form__item date-fieldset">
                         <legend>Date of birth</legend>
                         <p class="date-fieldset__item">
-                            <select id='months' placeholder="Month" class="date-fieldset__months">
+                            <select id='months' name = 'months' class="date-fieldset__months border_grey">
+                                <option value="" disabled selected>Month</option>
                                 <option value='0'>January</option>
                                 <option value='1'>February</option>
                                 <option value='2'>March</option>
@@ -50,24 +59,24 @@
                                 <option value='10'>November</option>
                                 <option value='11'>December</option>
                             </select>
-                            <input type="text" placeholder="Day" class="date-fieldset__day">
-                            <input type="text" placeholder="Year" class="date-fieldset__year"> 
+                            <input type="number" name = 'day' placeholder="Day" min="1" max="31" class="date-fieldset__day border_grey">
+                            <input type="number" name = 'year' placeholder="Year" min="1900" max="2020" class="date-fieldset__year border_grey"> 
                         </p>
                     </fieldset>
                     <fieldset class="registration-form__item gender-fieldset">
                         <legend>Gender</legend>
                         <p class="gender-fieldset__item">
-                            <input type="radio" value='male' name="gender" id="male">
+                            <input type="radio" value='male' class='border_grey' name="gender" id="male" checked>
                             <label for="male">Male</label>
                         </p>
                         <p class="gender-fieldset__item">
-                            <input type="radio" value='female' id='female' name="gender">
+                            <input type="radio" value='female' name="gender" class='border_grey'>
                             <label for="female">Female</label>
                         </p>   
                     </fieldset>
-                    <p class="registration-form__item registration-form__agree">
-                        <input type="checkbox" id='agree' >
-                        <label for="agree">I agree with Terms and Conditions</label>
+                    <p class="registration-form__item registration-form__agreement">
+                        <input type="checkbox" id='agreement' name = 'agreement' class='custom-checkbox border_grey' required>
+                        <label for="agreement">I agree with Terms and Conditions</label>
                     </p>
                     <p class="registration-form__item">
                         <button type='submit' class="submit-btn">Create my account</button>
