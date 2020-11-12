@@ -1,4 +1,4 @@
-window.onload = () => {
+window.addEventListener('load', () => {
     const fullnameInput = document.getElementById('fullname');
     const form = document.getElementById('registration-form');
     const err = document.getElementById('fullname-error');
@@ -16,4 +16,4 @@ window.onload = () => {
             fullnameInput.classList.remove('border_error');
         }
     })
-}
+});

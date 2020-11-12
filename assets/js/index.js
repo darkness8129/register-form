@@ -1,4 +1,4 @@
-window.onload = () => {
+window.addEventListener('load', () => {
     const passwordInput = document.getElementById('password'),
         togglePasswordBtn = document.getElementById('toggle-password-btn');
 
@@ -15,4 +15,4 @@ window.onload = () => {
 
         passwordInput.setAttribute('type', type);
     })
-}
+});
