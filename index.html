@@ -44,8 +44,8 @@
                     <fieldset class="registration-form__item date-fieldset">
                         <legend>Date of birth</legend>
                         <p class="date-fieldset__item">
-                            <select id='months' name = 'months' class="date-fieldset__months border_grey">
-                                <option value="" disabled selected>Month</option>
+                            <select id='months' name = 'months' class="date-fieldset__months border_grey" onchange="this.setAttribute('data-selected', true)">
+                                <option value='' disabled selected hidden>Month</option>
                                 <option value='0'>January</option>
                                 <option value='1'>February</option>
                                 <option value='2'>March</option>

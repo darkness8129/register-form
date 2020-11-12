@@ -226,12 +226,12 @@ body {
     color: #c6c6c6;
 }
 
-.date-fieldset__months > option[value=''][disabled] {
-    display: none;
+[data-selected] {
+    color: #000;
 }
 
 .date-fieldset__months > option:not(:first-of-type) {
-    color: black;
+    color: #333333;
 }
 
 .date-fieldset__day {
